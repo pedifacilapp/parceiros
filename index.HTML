@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PediFácil - Download</title>
+  <script>
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    // Detecta Android
+    if (userAgent.includes("android")) {
+      window.location.replace("https://play.google.com/store/apps/details?id=com.pedifacil.deliverycliente");
+    } 
+    // Detecta iOS
+    else if (/iphone|ipad|ipod/.test(userAgent)) {
+      window.location.replace("https://apps.apple.com/us/app/pedifacil/id6751516229");
+    } 
+    // Se for PC ou outro sistema
+    else {
+      // Redireção padrão -> escolha uma abaixo 👇
+      window.location.replace("https://play.google.com/store/apps/details?id=com.pedifacil.deliverycliente"); 
+      // 👉 se quiser mudar para iOS, troque para o link da App Store
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
